@@ -20,6 +20,7 @@ if [ "$d" -eq "1" ]; then # verifica si existe el archivo en el directorio actua
 		#echo $input
 		javac -Xstdout output.txt $input # compilo el archivo.java
 		v=$(cat output.txt | grep "error" | wc -l) # verifico que no se haya generado error de compilacion
+		cat output.txt
 		rm output.txt	# elimino el archivo de verificacion de error de compilacion
 		if [ "$v" -eq "0" ];then # verifico que no se haya generado error de compilacion
 		        #echo "No error de compilacion"
